@@ -1,5 +1,5 @@
 import Image from "next/image";
-import pont from "@/app/image/main.jpg";
+import pont from "@/public/image/main.jpg";
 import { Button } from "@/components/ui/button";
 export default function Section() {
   return (
