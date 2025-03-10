@@ -6,15 +6,15 @@ export default function Contact() {
   return (
     <>
       <section>
-        <div className="flex-row justify-center items-center pt-[2rem] pb-[6rem]">
-          <div className="flex-row px-[12.5rem]">
-            <h1 className="text-center uppercase font-bold text-3xl text-[#444]">
+        <div className="flex flex-col items-center pt-[2rem] pb-[6rem] px-4 md:px-[12.5rem]">
+          <div className="w-full text-center">
+            <h1 className="uppercase font-bold text-3xl text-[#444]">
               contactez-nous
             </h1>
             <div className="flex justify-center">
-              <hr className="mt-[1rem] w-[25rem] text-[#02b8dd]" />
+              <hr className="mt-[1rem] w-[10rem] md:w-[25rem] border-[#02b8dd]" />
             </div>
-            <p className="text-center text-[#444] mt-[1.5rem]">
+            <p className="text-[#444] mt-[1.5rem] text-base md:text-lg leading-relaxed">
               Chez Travel Agency nous savons que voyager est une aventure
               humaine mais également un engagement financier important pour
               vous. C&apos;est pourquoi nous mettons un point d&apos;honneur à
@@ -23,36 +23,38 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="flex justify-around">
-            <div className="flex w-[55rem] items-center gap-1.5 mt-[3rem]">
-              <Label
-                htmlFor="email"
-                className="text-[#444] mr-[.3rem] text-lg font-bold"
-              >
+          {/* Formulaire responsive */}
+          <div className="flex flex-col md:flex-row w-full md:w-[55rem] items-center gap-4 mt-[3rem]">
+            {/* Nom */}
+            <div className="flex flex-col md:flex-row items-center w-full md:w-auto gap-2">
+              <Label htmlFor="name" className="text-[#444] text-lg font-bold w-20 md:w-auto">
                 Nom
               </Label>
               <Input
-                type="email"
-                id="email"
+                type="text"
+                id="name"
                 placeholder="Votre nom"
-                className="w-[25rem] py-[1.5rem] rounded-sm mr-[1rem]"
+                className="w-full md:w-[20rem] py-[1.5rem] rounded-sm"
               />
-              <Label
-                htmlFor="email"
-                className="text-[#444] mr-[.3rem] text-lg font-bold"
-              >
+            </div>
+
+            {/* Email */}
+            <div className="flex flex-col md:flex-row items-center w-full md:w-auto gap-2">
+              <Label htmlFor="email" className="text-[#444] text-lg font-bold w-20 md:w-auto">
                 Email
               </Label>
               <Input
                 type="email"
                 id="email"
                 placeholder="Votre Email"
-                className="w-[25rem] py-[1.5rem] rounded-sm mr-[1rem]"
+                className="w-full md:w-[20rem] py-[1.5rem] rounded-sm"
               />
-              <Button className="p-[1.5rem] w-[2rem] bg-[#02b8dd] border-radius rounded-sm hover:bg-[#444] cursor-pointer font-bold text-lg">
-                OK
-              </Button>
             </div>
+
+            {/* Bouton */}
+            <Button className="w-full md:w-auto px-3 py-[1.5rem] bg-[#02b8dd] rounded-sm hover:bg-[#444] text-white font-bold text-lg cursor-pointer">
+              OK
+            </Button>
           </div>
         </div>
       </section>
