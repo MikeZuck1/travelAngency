@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export", // Permet d'exporter un site statique
-  distDir: "dist", // Définir le dossier de build
+  distDir: "dist",  // Définit le dossier de build
   images: {
-    unoptimized: true, // Désactiver l'optimisation des images (sinon, erreurs sur GitHub Pages)
+    unoptimized: true // Désactive l'optimisation des images pour GitHub Pages
   },
-  basePath: "/travelAngency", // Remplace par le nom de ton dépôt
-  assetPrefix: "/travelAngency/",
+  basePath: "/travelAngency",  // Remplace par le nom de ton repo GitHub
+  assetPrefix: "/travelAngency/"
 };
 
 module.exports = nextConfig;
